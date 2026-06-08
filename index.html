@@ -19,20 +19,33 @@
 
     <header class="border-b border-neutral-800 bg-black/50 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <span class="text-2xl font-black text-white">AB</span>
-            <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide">
-                <a href="#inicio" class="hover:text-[#b75229]">Inicio</a>
-                <a href="#productos" class="hover:text-[#b75229]">El Método</a>
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-black text-white">AB</span>
+                <span class="text-sm font-light tracking-widest uppercase border-l border-neutral-700 pl-2 text-neutral-400">Ale Brukman</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
+                <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
+                <a href="#productos" class="hover:text-white transition-colors">El Método</a>
+                <a href="#bio" class="hover:text-white transition-colors">Sobre Ale</a>
+                <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
             </nav>
-            <a href="producto.html" class="bg-accent hover-bg-accent text-white text-xs font-bold uppercase px-4 py-2 rounded">Ver Productos</a>
+            <div class="flex items-center space-x-6">
+                <div class="hidden sm:flex items-center space-x-4 text-neutral-400 text-lg">
+                    <a href="https://www.instagram.com/alebrukman/" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@alebrukman" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/ClasesBomboLegueroAleBrukman" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <a href="producto.html" class="bg-accent hover-bg-accent text-white text-xs font-bold uppercase px-4 py-2 rounded">Ver Productos</a>
+            </div>
         </div>
     </header>
 
     <section id="inicio" class="max-w-6xl mx-auto px-4 py-24 grid md:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
+            <span class="text-xs font-bold tracking-[0.2em] text-[#d49a55] uppercase">Percusión Folclórica Argentina</span>
             <h1 class="text-6xl md:text-8xl text-white font-serif-criolla leading-none">Aprendé <br><span class="italic text-[#d49a55]">a tu ritmo</span></h1>
             <p class="text-neutral-400 text-lg">Productos descargables de Bombo Legüero y Batería para folklore argentino.</p>
-            <a href="producto.html" class="inline-block bg-[#d49a55] text-black font-bold uppercase text-xs px-8 py-4">Ver Producto Destacado</a>
+            <a href="producto.html" class="inline-block bg-[#d49a55] hover:bg-[#bd8443] text-black font-bold uppercase text-xs px-8 py-4">Ver Producto Destacado</a>
         </div>
         <div class="flex justify-end">
             <img src="Alejandro.jpg" alt="Alejandro Brukman" class="w-full max-w-sm rounded-[2rem] grayscale hover:grayscale-0 transition-all">
@@ -54,6 +67,10 @@
         <h2 class="text-3xl font-black mb-8">Sobre Ale Brukman</h2>
         <p class="max-w-2xl mx-auto text-neutral-400">Músico e investigador de ritmos nativos, uniendo la tradición con la batería contemporánea.</p>
     </section>
+
+    <footer id="contacto" class="bg-black py-12 text-center text-neutral-500">
+        <p>&copy; 2026 Ale Brukman. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
