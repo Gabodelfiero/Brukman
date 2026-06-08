@@ -18,7 +18,7 @@
         .border-accent { border-color: #b75229; }
         .hover-bg-accent:hover { background-color: #9c411f; }
         
-        /* Tipografía clásica elegante para la sección principal */
+        /* Tipografía elegante para el título principal */
         .font-serif-criolla {
             font-family: 'Playfair Display', 'Georgia', serif;
         }
@@ -44,57 +44,37 @@
         </div>
     </header>
 
-    <section id="inicio" class="bg-[#0a0908] border-b border-neutral-900 py-20 md:py-28">
-        <div class="max-w-4xl mx-auto px-6 text-left space-y-8">
-            <span class="text-xs font-bold tracking-widest text-[#d49a55] uppercase font-mono block">
-                PERCUSIÓN FOLCLÓRICA ARGENTINA
+    <section id="inicio" class="relative max-w-6xl mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 order-2 md:order-1">
+            <span class="text-[10px] md:text-xs font-bold tracking-widest text-[#b75229] uppercase bg-neutral-900/80 px-3 py-1.5 rounded border border-neutral-800 inline-block font-mono">
+                Tradición & Batería Moderna
             </span>
             
-            <h1 class="text-5xl md:text-8xl text-white font-serif-criolla tracking-tight leading-none">
-                Aprendé <br><span class="italic text-[#d49a55]">a tu ritmo</span>
+            <h1 class="text-5xl md:text-7xl text-white font-serif-criolla tracking-tight leading-none">
+                Aprendé <br><span class="italic text-[#d49a55] font-normal">a tu ritmo</span>
             </h1>
             
-            <p class="text-neutral-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+            <p class="text-neutral-400 text-base md:text-lg font-light leading-relaxed max-w-lg">
                 Productos descargables de Bombo Legüero y Batería para folklore argentino. Con partituras propias, paso a paso desde casa.
             </p>
             
-            <div class="pt-6 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                <a href="#curso" class="bg-[#d49a55] hover:bg-[#b88244] text-black font-bold uppercase tracking-widest text-xs px-8 py-4 rounded transition-all">
-                    VER PRODUCTOS DISPONIBLES
-                </a>
-                <a href="#bio" class="text-white text-xs font-bold uppercase tracking-widest border-b border-white/40 hover:border-white pb-1 transition-all">
-                    CONOCER A ALE →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6 order-2 md:order-1">
-            <span class="text-xs font-bold tracking-widest text-accent uppercase bg-neutral-900 px-3 py-1 rounded border border-neutral-800 inline-block">
-                Tradición & Batería Moderna
-            </span>
-            <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
-                El pulso del <br><span class="text-accent">Bombo Legüero</span> en tu batería.
-            </h2>
-            <p class="text-neutral-400 text-lg font-light leading-relaxed">
-                Fusioná la riqueza rítmica del folclore argentino con la batería. Un enfoque pedagógico claro, directo y estructurado para músicos de todos los niveles.
-            </p>
-            <div class="pt-2">
-                <a href="#curso" class="bg-accent hover-bg-accent text-white font-bold inline-block uppercase tracking-wide px-8 py-4 rounded transition-all">
+            <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                <a href="#curso" class="bg-accent hover-bg-accent text-white font-bold text-center uppercase text-sm tracking-wider px-8 py-4 rounded transition-all shadow-lg shadow-amber-900/10">
                     Comenzar el Curso
                 </a>
+                <a href="#curso" class="border border-neutral-800 hover:border-neutral-600 text-white font-bold text-center uppercase text-sm tracking-wider px-8 py-4 rounded transition-all bg-black/20">
+                    Ver Productos
+                </a>
             </div>
         </div>
+        
         <div class="order-1 md:order-2 flex justify-center">
-            <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-neutral-800 shadow-2xl bg-neutral-900">
+            <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900">
                 <img src="Alejandro.jpg" alt="Alejandro Brukman" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t filter from-black via-transparent to-transparent opacity-60"></div>
+                <div class="absolute inset-0 bg-gradient-to-t filter from-black via-transparent to-transparent opacity-40"></div>
             </div>
         </div>
     </section>
-
-    <hr class="border-neutral-900 max-w-6xl mx-auto w-full">
 
     <section id="curso" class="max-w-6xl mx-auto px-4 py-16 md:py-24">
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -129,7 +109,7 @@
                     </div>
                     <div class="bg-neutral-900 p-3 rounded-lg border border-neutral-800 text-center">
                         <span class="block text-xs font-bold text-neutral-500 uppercase">Formato</span>
-                        <span class="text-white font-mono font-bold">HD + PDF</span>
+                        <span class="text-white font-mono font-bold">HD + Productos</span>
                     </div>
                     <div class="bg-neutral-900 p-3 rounded-lg border border-neutral-800 text-center">
                         <span class="block text-xs font-bold text-neutral-500 uppercase">Digitación</span>
