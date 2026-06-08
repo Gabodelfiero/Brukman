@@ -4,32 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ale Brukman | Músico y Educador</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        accent: '#b75229',
-                        'accent-hover': '#9c411f',
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         body { font-family: 'Montserrat', sans-serif; background-color: #0d0d0d; }
+        .text-accent { color: #b75229; }
+        .bg-accent { background-color: #b75229; }
+        .border-accent { border-color: #b75229; }
+        .hover-bg-accent:hover { background-color: #9c411f; }
         .font-serif-criolla { font-family: 'Playfair Display', 'Georgia', serif; }
     </style>
 </head>
-<body class="text-gray-200 min-h-screen flex flex-col justify-between bg-[#0d0d0d]">
+<body class="text-gray-200 min-h-screen flex flex-col justify-between selection:bg-amber-700 selection:text-white">
 
     <header class="border-b border-neutral-800 bg-black/50 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <span class="text-2xl font-black text-white">AB</span>
+                <span class="text-2xl font-black tracking-tighter text-white">AB</span>
                 <span class="text-sm font-light tracking-widest uppercase border-l border-neutral-700 pl-2 text-neutral-400">Ale Brukman</span>
             </div>
             <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
@@ -40,49 +34,75 @@
             </nav>
             <div class="flex items-center space-x-6">
                 <div class="hidden sm:flex items-center space-x-4 text-neutral-400 text-lg">
-                    <a href="https://www.instagram.com/alebrukman/" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@alebrukman" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.facebook.com/ClasesBomboLegueroAleBrukman" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/alebrukman/" target="_blank" rel="noopener noreferrer" class="hover:text-[#d49a55] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@alebrukman" target="_blank" rel="noopener noreferrer" class="hover:text-[#d49a55] transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/ClasesBomboLegueroAleBrukman" target="_blank" rel="noopener noreferrer" class="hover:text-[#d49a55] transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
+                <a href="producto.html" class="bg-accent hover-bg-accent text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded transition-all">
+                    Ver Productos
+                </a>
             </div>
         </div>
     </header>
 
-    <section id="inicio" class="relative max-w-6xl mx-auto px-4 py-24 grid md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-            <span class="text-xs font-bold tracking-[0.2em] text-[#d49a55] uppercase">PERCUSIÓN FOLCLÓRICA ARGENTINA</span>
-            <h1 class="text-6xl md:text-8xl text-white font-serif-criolla leading-none">Aprendé <br><span class="italic text-[#d49a55] font-normal">a tu ritmo</span></h1>
-            <p class="text-neutral-400 text-lg font-light leading-relaxed">Productos descargables de Bombo Legüero y Batería para folklore argentino. Con partituras propias, paso a paso desde casa.</p>
-            <a href="producto.html" class="inline-block bg-[#d49a55] hover:bg-[#bd8443] text-black font-bold uppercase text-xs tracking-widest px-8 py-4">Ver Producto Destacado</a>
+    <section id="inicio" class="relative max-w-6xl mx-auto px-4 py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 order-2 md:order-1">
+            <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] text-[#d49a55] uppercase inline-block">PERCUSIÓN FOLCLÓRICA ARGENTINA</span>
+            <h1 class="text-6xl md:text-8xl text-white font-serif-criolla tracking-tight leading-none">Aprendé <br><span class="italic text-[#d49a55] font-normal">a tu ritmo</span></h1>
+            <p class="text-neutral-400 text-base md:text-lg font-light leading-relaxed max-w-lg">Productos descargables de Bombo Legüero y Batería para folklore argentino. Con partituras propias, paso a paso desde casa.</p>
+            <div class="pt-6 flex flex-col sm:flex-row items-center gap-8">
+                <a href="producto.html" class="w-full sm:w-auto bg-[#d49a55] hover:bg-[#bd8443] text-black font-bold text-center uppercase text-xs tracking-widest px-8 py-4 transition-all">Ver Productos Disponibles</a>
+                <a href="#bio" class="text-white hover:text-[#d49a55] font-bold text-center uppercase text-xs tracking-widest transition-all border-b border-white hover:border-[#d49a55] pb-1">Conocer a Ale &rarr;</a>
+            </div>
         </div>
-        <div class="flex justify-end">
-            <img src="Alejandro.jpg" alt="Alejandro Brukman" class="w-full max-w-sm rounded-[2rem] grayscale hover:grayscale-0 transition-all duration-700">
-        </div>
-    </section>
-
-    <section id="productos" class="max-w-6xl mx-auto px-4 py-24">
-        <div class="bg-neutral-950 border border-neutral-800 rounded-3xl p-12 grid lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-4"><img src="juguetona portada.jpg" alt="Portada" class="w-full rounded-xl"></div>
-            <div class="lg:col-span-8 space-y-6">
-                <h3 class="text-3xl font-black text-white">LA JUGUETONA</h3>
-                <p class="text-neutral-400 font-light leading-relaxed">Chacarera Simple en Batería y Bombo Legüero. Contiene 10 Ejercicios interactivos en video grabados en primera persona, acompañados por la partitura rítmica completa y desglosada. Diseñado para un aprendizaje fluido y visual.</p>
-                <a href="producto.html" class="inline-block bg-accent hover:bg-accent-hover text-white font-bold uppercase text-xs px-8 py-4 rounded-lg transition-all">Ver Detalles del Producto</a>
+        <div class="order-1 md:order-2 flex justify-center md:justify-end">
+            <div class="relative w-full max-w-md aspect-square rounded-[2rem] overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900">
+                <img src="Alejandro.jpg" alt="Alejandro Brukman" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 hover:scale-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             </div>
         </div>
     </section>
 
-    <section id="bio" class="max-w-6xl mx-auto px-4 py-24 text-center">
-        <h2 class="text-3xl font-black text-white mb-8">Sobre Ale Brukman</h2>
-        <p class="max-w-2xl mx-auto text-neutral-400 font-light leading-relaxed">Músico e investigador de ritmos nativos, uniendo la tradición con la batería contemporánea.</p>
+    <section id="productos" class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Producto Destacado</h2>
+            <div class="w-16 h-1 bg-accent mx-auto rounded"></div>
+        </div>
+        <div class="bg-neutral-950 border border-neutral-800 rounded-3xl p-6 md:p-12 grid lg:grid-cols-12 gap-8 items-center shadow-xl">
+            <div class="lg:col-span-4 flex justify-center">
+                <div class="w-64 bg-neutral-900 p-2 rounded-xl border border-neutral-800 shadow-md">
+                    <img src="juguetona portada.jpg" alt="Portada La Juguetona" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+            <div class="lg:col-span-8 space-y-6">
+                <h3 class="text-2xl md:text-3xl font-black text-white tracking-tight">LA JUGUETONA <br><span class="text-neutral-400 font-normal text-xl md:text-2xl">Chacarera Simple en Batería y Bombo Legüero</span></h3>
+                <p class="text-neutral-400 font-light leading-relaxed">Este método te lleva desde las células rítmicas básicas del bombo legüero aplicadas a los aros y parches, hasta la orquestación completa en una batería estándar.</p>
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-900">
+                    <a href="producto.html" class="w-full sm:w-auto bg-accent hover-bg-accent text-white font-bold uppercase tracking-wide px-8 py-4 rounded-xl transition-all text-center">Ver Detalles y Adquirir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bio" class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-5 flex justify-center order-2 md:order-1">
+            <div class="relative w-full max-w-sm bg-neutral-900 p-3 rounded-2xl border border-neutral-800">
+                <img src="bombo pc.jpg" alt="Estudio" class="w-full h-auto rounded-xl filter brightness-90">
+            </div>
+        </div>
+        <div class="md:col-span-7 space-y-6 order-1 md:order-2">
+            <h2 class="text-3xl font-black text-white tracking-tight">Sobre Ale Brukman</h2>
+            <p class="text-neutral-400 font-light leading-relaxed">Músico, docente e investigador de los ritmos nativos.</p>
+        </div>
     </section>
 
     <footer id="contacto" class="bg-black border-t border-neutral-900 py-12 text-center text-neutral-500">
         <div class="flex justify-center space-x-6 text-2xl mb-6">
-            <a href="https://www.instagram.com/alebrukman/" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@alebrukman" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.facebook.com/ClasesBomboLegueroAleBrukman" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/alebrukman/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@alebrukman" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/ClasesBomboLegueroAleBrukman" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
-        <p>&copy; 2026 Ale Brukman. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Ale Brukman.</p>
     </footer>
 
 </body>
