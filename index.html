@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ale Brukman | Músico y Educador</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -22,6 +23,11 @@
         .font-serif-criolla {
             font-family: 'Playfair Display', 'Georgia', serif;
         }
+
+        /* Control del modal sin JS */
+        #modal-compra:target {
+            display: flex;
+        }
     </style>
 </head>
 <body class="text-gray-200 min-h-screen flex flex-col justify-between selection:bg-amber-700 selection:text-white">
@@ -38,9 +44,17 @@
                 <a href="#bio" class="hover:text-white transition-colors">Sobre Ale</a>
                 <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
             </nav>
-            <a href="#curso" class="bg-accent hover-bg-accent text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded transition-all">
-                Ver Curso
-            </a>
+            
+            <div class="flex items-center space-x-6">
+                <div class="hidden sm:flex items-center space-x-4 text-neutral-400 text-lg">
+                    <a href="https://www.instagram.com/alebrukman/" target="_blank" class="hover:text-[#d49a55] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@alebrukman" target="_blank" class="hover:text-[#d49a55] transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/ClasesBomboLegueroAleBrukman" target="_blank" class="hover:text-[#d49a55] transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <a href="#curso" class="bg-accent hover-bg-accent text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded transition-all">
+                    Ver Curso
+                </a>
+            </div>
         </div>
     </header>
 
@@ -124,15 +138,45 @@
                 <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-900">
                     <div>
                         <span class="text-xs text-neutral-500 block uppercase font-bold tracking-wider">Precio de lanzamiento</span>
-                        <span class="text-3xl font-black text-white">$15.000 <span class="text-sm font-normal text-neutral-400">ARS</span></span>
+                        <span class="text-3xl font-black text-white">$20.000 <span class="text-sm font-normal text-neutral-400">ARS</span></span>
                     </div>
-                    <button class="w-full sm:w-auto bg-accent hover-bg-accent text-white font-bold uppercase tracking-wide px-8 py-4 rounded-xl transition-all flex items-center justify-center space-x-2">
-                        <span>Adquirir Curso</span>
-                    </button>
+                    <a href="#modal-compra" class="w-full sm:w-auto bg-accent hover-bg-accent text-white font-bold uppercase tracking-wide px-8 py-4 rounded-xl transition-all flex items-center justify-center space-x-2 text-center">
+                        <span>Comprar</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="modal-compra" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm items-center justify-center p-4 target:flex">
+        <div class="bg-neutral-900 border border-neutral-800 max-w-2xl w-full rounded-2xl overflow-hidden relative shadow-2xl grid md:grid-cols-12">
+            <a href="#curso" class="absolute top-4 right-4 text-neutral-400 hover:text-white font-bold text-xl p-2 z-10">&times;</a>
+            
+            <div class="md:col-span-5 bg-neutral-950 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-neutral-800">
+                <img src="juguetona portada.jpg" alt="La Juguetona" class="w-full max-w-[180px] h-auto rounded-lg shadow-lg">
+            </div>
+            
+            <div class="md:col-span-7 p-8 flex flex-col justify-between space-y-6">
+                <div class="space-y-4">
+                    <h4 class="text-xl font-black text-white tracking-tight">Detalles del Contenido</h4>
+                    <div class="h-0.5 w-8 bg-accent rounded"></div>
+                    <p class="text-neutral-300 text-sm font-medium leading-relaxed">
+                        10 Ejercicios en Video experiencia en primera persona + partitura completa de la Juguetona
+                    </p>
+                </div>
+                
+                <div class="pt-4 flex items-center justify-between border-t border-neutral-800">
+                    <div>
+                        <span class="text-[10px] text-neutral-500 block uppercase font-bold tracking-wider">Total</span>
+                        <span class="text-2xl font-black text-white">$20.000 <span class="text-xs font-normal text-neutral-400">ARS</span></span>
+                    </div>
+                    <button class="bg-accent hover-bg-accent text-white font-bold uppercase text-xs tracking-wider px-6 py-3 rounded-lg transition-all">
+                        Confirmar Pago
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="bg-neutral-950 border-y border-neutral-900 py-16">
         <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
@@ -143,7 +187,7 @@
                 </p>
             </div>
             <div class="relative bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl p-2">
-                <img src="producto videos.jpg" alt="Interfaz de Video del Curso" class="w-full h-auto rounded-xl">
+                <img src="producto videos.jpeg" alt="Interfaz de Video del Curso" class="w-full h-auto rounded-xl">
             </div>
         </div>
     </section>
@@ -165,7 +209,13 @@
     </section>
 
     <footer id="contacto" class="bg-black border-t border-neutral-900 py-12 mt-auto text-center space-y-6">
-        <div class="max-w-6xl mx-auto px-4 space-y-4">
+        <div class="max-w-6xl mx-auto px-4 space-y-6">
+            <div class="flex justify-center space-x-6 text-2xl text-neutral-500">
+                <a href="https://www.instagram.com/alebrukman/" target="_blank" class="hover:text-[#d49a55] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@alebrukman" target="_blank" class="hover:text-[#d49a55] transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.facebook.com/ClasesBomboLegueroAleBrukman" target="_blank" class="hover:text-[#d49a55] transition-colors"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            
             <div class="pt-2">
                 <a href="mailto:contacto@alebrukman.com.ar" class="text-accent font-bold hover:underline tracking-wide text-lg">
                     contacto@alebrukman.com.ar
