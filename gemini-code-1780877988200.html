@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ale Brukman | Músico y Educador</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0d0d0d;
+        }
+        /* Color acento Terracota/Óxido de La Juguetona */
+        .text-accent { color: #b75229; }
+        .bg-accent { background-color: #b75229; }
+        .border-accent { border-color: #b75229; }
+        .hover-bg-accent:hover { background-color: #9c411f; }
+    </style>
+</head>
+<body class="text-gray-200 min-h-screen flex flex-col justify-between selection:bg-amber-700 selection:text-white">
+
+    <header class="border-b border-neutral-800 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-black tracking-tighter text-white">AB</span>
+                <span class="text-sm font-light tracking-widest uppercase border-l border-neutral-700 pl-2 text-neutral-400">Ale Brukman</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
+                <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
+                <a href="#curso" class="text-accent hover:text-white transition-colors">El Método</a>
+                <a href="#bio" class="hover:text-white transition-colors">Sobre Ale</a>
+                <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+            </nav>
+            <a href="#curso" class="bg-accent hover-bg-accent text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded transition-all">
+                Ver Curso
+            </a>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative max-w-6xl mx-auto px-4 py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 order-2 md:order-1">
+            <span class="text-xs font-bold tracking-widest text-accent uppercase bg-neutral-900 px-3 py-1 rounded border border-neutral-800 inline-block">
+                Tradición & Batería Moderna
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight">
+                El pulso del <br><span class="text-accent">Bombo Legüero</span> en tu batería.
+            </h1>
+            <p class="text-neutral-400 text-lg font-light leading-relaxed">
+                Aprendé a fusionar la riqueza rítmica del folclore argentino con la batería. Un enfoque pedagógico claro, directo y estructurado para músicos de todos los niveles.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                <a href="#curso" class="bg-accent hover-bg-accent text-white font-bold text-center uppercase tracking-wide px-8 py-4 rounded transition-all shadow-lg shadow-amber-900/20">
+                    Comenzar el Curso
+                </a>
+                <a href="#bio" class="border border-neutral-700 hover:border-white text-white font-bold text-center uppercase tracking-wide px-8 py-4 rounded transition-all">
+                    Saber Más
+                </a>
+            </div>
+        </div>
+        <div class="order-1 md:order-2 flex justify-center">
+            <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-neutral-800 shadow-2xl">
+                <img src="Alejandro.jpg" alt="Alejandro Brukman" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t filter from-black via-transparent to-transparent opacity-60"></div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-neutral-900 max-w-6xl mx-auto w-full">
+
+    <section id="curso" class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Curso Destacado</h2>
+            <div class="w-16 h-1 bg-accent mx-auto rounded"></div>
+            <p class="text-neutral-400 font-light">
+                Un desglose paso a paso en formato audiovisual, con partituras integradas y ejercicios diseñados para dominar el groove criollo.
+            </p>
+        </div>
+
+        <div class="bg-neutral-950 border border-neutral-800 rounded-3xl p-6 md:p-12 grid lg:grid-cols-12 gap-8 items-center shadow-xl">
+            <div class="lg:col-span-4 flex justify-center">
+                <div class="w-64 bg-neutral-900 p-2 rounded-xl border border-neutral-800 shadow-md">
+                    <img src="juguetona portada.jpg" alt="Portada La Juguetona" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+            
+            <div class="lg:col-span-8 space-y-6">
+                <h3 class="text-2xl md:text-3xl font-black text-white tracking-tight">
+                    LA JUGUETONA <br>
+                    <span class="text-neutral-400 font-normal text-xl md:text-2xl">Chacarera Simple en Batería y Bombo Legüero</span>
+                </h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
+                    <div class="bg-neutral-900 p-3 rounded-lg border border-neutral-800 text-center">
+                        <span class="block text-xs font-bold text-neutral-500 uppercase">Velocidad</span>
+                        <span class="text-white font-mono font-bold">♩. ≈ 108</span>
+                    </div>
+                    <div class="bg-neutral-900 p-3 rounded-lg border border-neutral-800 text-center">
+                        <span class="block text-xs font-bold text-neutral-500 uppercase">Ejercicios</span>
+                        <span class="text-white font-mono font-bold">10 Videos</span>
+                    </div>
+                    <div class="bg-neutral-900 p-3 rounded-lg border border-neutral-800 text-center">
+                        <span class="block text-xs font-bold text-neutral-500 uppercase">Formato</span>
+                        <span class="text-white font-mono font-bold">HD + PDF</span>
+                    </div>
+                    <div class="bg-neutral-900 p-3 rounded-lg border border-neutral-800 text-center">
+                        <span class="block text-xs font-bold text-neutral-500 uppercase">Digitación</span>
+                        <span class="text-white font-mono font-bold">D / I Incluida</span>
+                    </div>
+                </div>
+
+                <p class="text-neutral-400 font-light leading-relaxed">
+                    Este método te lleva desde las células rítmicas básicas del bombo legüero aplicadas a los aros y parches, hasta la orquestación completa en una batería estándar. Ideal para bateristas que buscan expandir su vocabulario rítmico con identidad argentina.
+                </p>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-900">
+                    <div>
+                        <span class="text-xs text-neutral-500 block uppercase font-bold tracking-wider">Precio de lanzamiento</span>
+                        <span class="text-3xl font-black text-white">$15.000 <span class="text-sm font-normal text-neutral-400">ARS</span></span>
+                    </div>
+                    <button class="w-full sm:w-auto bg-accent hover-bg-accent text-white font-bold uppercase tracking-wide px-8 py-4 rounded-xl transition-all flex items-center justify-center space-x-2">
+                        <span>Adquirir Curso</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-neutral-950 border-y border-neutral-900 py-16">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-4">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">Estudiá a tu propio ritmo</h3>
+                <p class="text-neutral-400 font-light leading-relaxed">
+                    Cada ejercicio cuenta con una interfaz optimizada para pantallas en el estudio de práctica. Partituras claras en métrica de 6/8, marcas de metrónomo lentas y rápidas, y guías de manos independientes para que no te pierdas ningún golpe.
+                </p>
+                <ul class="space-y-2 text-sm text-neutral-300">
+                    <li class="flex items-center space-x-2">
+                        <span class="text-accent">✓</span> <span>Compases divididos por dificultad.</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span class="text-accent">✓</span> <span>Tomas cenitales (desde arriba) para máxima claridad.</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span class="text-accent">✓</span> <span>Ideal para practicar con tu compu o tablet al lado del bombo.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative bg-black rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl p-2">
+                <img src="producto videos.jpg" alt="Interfaz de Video del Curso" class="w-full h-auto rounded-xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="bio" class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-5 flex justify-center order-2 md:order-1">
+            <div class="relative w-full max-w-sm bg-neutral-900 p-3 rounded-2xl border border-neutral-800">
+                <img src="bombo pc.jpg" alt="Estudio de Ale Brukman" class="w-full h-auto rounded-xl filter brightness-90">
+                <p class="text-center text-xs text-neutral-500 mt-3 font-mono">Espacio de trabajo & raíz folclórica</p>
+            </div>
+        </div>
+        <div class="md:col-span-7 space-y-6 order-1 md:order-2">
+            <h2 class="text-3xl font-black text-white tracking-tight">Sobre Ale Brukman</h2>
+            <div class="w-12 h-1 bg-accent rounded"></div>
+            <p class="text-neutral-400 font-light leading-relaxed">
+                Músico, docente e investigador de los ritmos nativos. Mi enfoque se centra en tender un puente entre las raíces tradicionales de nuestra música tradicional —como la chacarera, el gato y el escondido— y los sets de batería contemporáneos.
+            </p>
+            <p class="text-neutral-400 font-light leading-relaxed">
+                A través de herramientas analíticas y un sistema visual moderno, busco que el proceso de aprendizaje sea orgánico, preciso y adaptado a las necesidades del músico actual.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-black border-t border-neutral-900 py-12 mt-auto text-center space-y-6">
+        <div class="max-w-6xl mx-auto px-4 space-y-4">
+            <p class="text-sm font-bold tracking-widest uppercase text-neutral-400">¿Tenés alguna consulta sobre los métodos?</p>
+            <p class="text-neutral-500 text-sm max-w-md mx-auto font-light">
+                Escribime para soporte con las descargas de partituras o consultas sobre clases y talleres.
+            </p>
+            <div class="pt-2">
+                <a href="mailto:tu-email@dominio.com" class="text-accent font-bold hover:underline tracking-wide text-lg">
+                    contacto@alebrukman.com.ar
+                </a>
+            </div>
+            <div class="pt-8 text-xs text-neutral-600 font-mono flex flex-col md:flex-row justify-between items-center gap-4 max-w-4xl mx-auto border-t border-neutral-950">
+                <p>&copy; 2026 Ale Brukman. Todos los derechos reservados.</p>
+                <p class="text-neutral-700">Diseñado con identidad criolla & urbana</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
