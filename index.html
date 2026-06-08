@@ -7,15 +7,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#b75229',
+                        'accent-hover': '#9c411f',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Montserrat', sans-serif; background-color: #0d0d0d; }
-        .font-serif-criolla { font-family: 'Playfair Display', serif; }
-        .text-accent { color: #b75229; }
-        .bg-accent { background-color: #b75229; }
-        .hover-bg-accent:hover { background-color: #9c411f; }
+        .font-serif-criolla { font-family: 'Playfair Display', 'Georgia', serif; }
     </style>
 </head>
-<body class="text-gray-200 bg-[#0d0d0d]">
+<body class="text-gray-200 min-h-screen flex flex-col justify-between bg-[#0d0d0d]">
 
     <header class="border-b border-neutral-800 bg-black/50 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -35,20 +44,19 @@
                     <a href="https://www.youtube.com/@alebrukman" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-youtube"></i></a>
                     <a href="https://www.facebook.com/ClasesBomboLegueroAleBrukman" target="_blank" class="hover:text-[#d49a55]"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
-                <a href="producto.html" class="bg-accent hover-bg-accent text-white text-xs font-bold uppercase px-4 py-2 rounded">Ver Productos</a>
             </div>
         </div>
     </header>
 
-    <section id="inicio" class="max-w-6xl mx-auto px-4 py-24 grid md:grid-cols-2 gap-12 items-center">
+    <section id="inicio" class="relative max-w-6xl mx-auto px-4 py-24 grid md:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
-            <span class="text-xs font-bold tracking-[0.2em] text-[#d49a55] uppercase">Percusión Folclórica Argentina</span>
-            <h1 class="text-6xl md:text-8xl text-white font-serif-criolla leading-none">Aprendé <br><span class="italic text-[#d49a55]">a tu ritmo</span></h1>
-            <p class="text-neutral-400 text-lg">Productos descargables de Bombo Legüero y Batería para folklore argentino.</p>
-            <a href="producto.html" class="inline-block bg-[#d49a55] hover:bg-[#bd8443] text-black font-bold uppercase text-xs px-8 py-4">Ver Producto Destacado</a>
+            <span class="text-xs font-bold tracking-[0.2em] text-[#d49a55] uppercase">PERCUSIÓN FOLCLÓRICA ARGENTINA</span>
+            <h1 class="text-6xl md:text-8xl text-white font-serif-criolla leading-none">Aprendé <br><span class="italic text-[#d49a55] font-normal">a tu ritmo</span></h1>
+            <p class="text-neutral-400 text-lg font-light leading-relaxed">Productos descargables de Bombo Legüero y Batería para folklore argentino. Con partituras propias, paso a paso desde casa.</p>
+            <a href="producto.html" class="inline-block bg-[#d49a55] hover:bg-[#bd8443] text-black font-bold uppercase text-xs tracking-widest px-8 py-4">Ver Producto Destacado</a>
         </div>
         <div class="flex justify-end">
-            <img src="Alejandro.jpg" alt="Alejandro Brukman" class="w-full max-w-sm rounded-[2rem] grayscale hover:grayscale-0 transition-all">
+            <img src="Alejandro.jpg" alt="Alejandro Brukman" class="w-full max-w-sm rounded-[2rem] grayscale hover:grayscale-0 transition-all duration-700">
         </div>
     </section>
 
@@ -57,15 +65,15 @@
             <div class="lg:col-span-4"><img src="juguetona portada.jpg" alt="Portada" class="w-full rounded-xl"></div>
             <div class="lg:col-span-8 space-y-6">
                 <h3 class="text-3xl font-black text-white">LA JUGUETONA</h3>
-                <p class="text-neutral-400">Chacarera Simple en Batería y Bombo Legüero. Contiene 10 Ejercicios interactivos en video grabados en primera persona, acompañados por la partitura rítmica completa y desglosada. Diseñado para un aprendizaje fluido y visual.</p>
-                <a href="producto.html" class="inline-block bg-accent hover-bg-accent text-white font-bold uppercase text-xs px-8 py-4 rounded-lg">Ver Detalles del Producto</a>
+                <p class="text-neutral-400 font-light leading-relaxed">Chacarera Simple en Batería y Bombo Legüero. Contiene 10 Ejercicios interactivos en video grabados en primera persona, acompañados por la partitura rítmica completa y desglosada. Diseñado para un aprendizaje fluido y visual.</p>
+                <a href="producto.html" class="inline-block bg-accent hover:bg-accent-hover text-white font-bold uppercase text-xs px-8 py-4 rounded-lg transition-all">Ver Detalles del Producto</a>
             </div>
         </div>
     </section>
 
     <section id="bio" class="max-w-6xl mx-auto px-4 py-24 text-center">
-        <h2 class="text-3xl font-black mb-8 text-white">Sobre Ale Brukman</h2>
-        <p class="max-w-2xl mx-auto text-neutral-400">Músico e investigador de ritmos nativos, uniendo la tradición con la batería contemporánea.</p>
+        <h2 class="text-3xl font-black text-white mb-8">Sobre Ale Brukman</h2>
+        <p class="max-w-2xl mx-auto text-neutral-400 font-light leading-relaxed">Músico e investigador de ritmos nativos, uniendo la tradición con la batería contemporánea.</p>
     </section>
 
     <footer id="contacto" class="bg-black border-t border-neutral-900 py-12 text-center text-neutral-500">
