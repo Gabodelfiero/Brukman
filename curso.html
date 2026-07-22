@@ -44,7 +44,7 @@
 
         <div class="video-player-container">
             <iframe id="main-video" 
-                src="https://www.youtube.com/embed/Mx6o0ZeHUZM?enablejsapi=1" 
+                src="https://www.youtube.com/embed/Mx6o0ZeHUZM?enablejsapi=1&modestbranding=1&rel=0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
@@ -85,7 +85,7 @@
     <script>
         function changeVideo(youtubeId, element) {
             const videoIframe = document.getElementById('main-video');
-            videoIframe.src = "https://www.youtube.com/embed/" + youtubeId + "?enablejsapi=1&autoplay=1";
+            videoIframe.src = "https://www.youtube.com/embed/" + youtubeId + "?enablejsapi=1&autoplay=1&modestbranding=1&rel=0";
             document.querySelectorAll('.class-item').forEach(item => item.classList.remove('active'));
             element.classList.add('active');
         }
