@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Juguetona - Bombo Legüero y Batería</title>
+    <meta name="robots" content="noindex, nofollow">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
         body { background-color: #0b0b0b; color: #ffffff; padding: 20px 15px; display: flex; justify-content: center; min-height: 100vh; }
@@ -32,20 +33,55 @@
         .download-box { border-top: 1px solid #222; padding-top: 20px; text-align: center; }
         .btn-download { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: linear-gradient(135deg, #d4af37 0%, #aa841c 100%); color: #000; text-decoration: none; padding: 14px; border-radius: 10px; font-weight: bold; font-size: 1rem; }
         .btn-download:hover { opacity: 0.9; }
+
+        /* --- Pantalla de acceso por contraseña --- */
+        #gate-screen {
+            width: 100%; max-width: 420px;
+            background-color: #121212; border: 1px solid #222;
+            border-radius: 16px; padding: 30px 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-top: 60px; text-align: center;
+        }
+        #gate-screen h1 { font-size: 1.3rem; color: #d4af37; margin-bottom: 8px; }
+        #gate-screen p { color: #999; font-size: 0.9rem; margin-bottom: 20px; line-height: 1.4; }
+        #gate-pass {
+            width: 100%; padding: 13px 14px; border-radius: 10px;
+            border: 1px solid #333; background-color: #1a1a1a; color: #fff;
+            font-size: 1rem; margin-bottom: 12px; outline: none;
+        }
+        #gate-pass:focus { border-color: #d4af37; }
+        #gate-btn {
+            width: 100%; padding: 14px; border-radius: 10px; border: none;
+            background: linear-gradient(135deg, #d4af37 0%, #aa841c 100%);
+            color: #000; font-weight: bold; font-size: 1rem; cursor: pointer;
+        }
+        #gate-btn:hover { opacity: 0.9; }
+        #gate-error { color: #e05555; font-size: 0.85rem; margin-top: 12px; min-height: 18px; }
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
 
-    <div id="main-content">
+    <!-- Pantalla de acceso -->
+    <div id="gate-screen">
+        <h1>Acceso a La Juguetona</h1>
+        <p>Ingresá la contraseña que te enviamos por email al confirmar tu compra.</p>
+        <input type="password" id="gate-pass" placeholder="Contraseña" autocomplete="off">
+        <button id="gate-btn" onclick="checkAccess()">Ingresar</button>
+        <div id="gate-error"></div>
+    </div>
+
+    <!-- Contenido del curso (oculto hasta ingresar la contraseña) -->
+    <div id="main-content" class="hidden">
         <div class="header">
             <h1>LA JUGUETONA</h1>
             <p>Para Bombo Legüero y Batería • Prof. Alejandro Brukman</p>
         </div>
 
         <div class="video-player-container">
-            <iframe id="main-video" 
-                src="https://www.youtube.com/embed/Mx6o0ZeHUZM?enablejsapi=1&modestbranding=1&rel=0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            <iframe id="main-video"
+                src="https://www.youtube.com/embed/Mx6o0ZeHUZM?enablejsapi=1&modestbranding=1&rel=0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
         </div>
@@ -83,6 +119,31 @@
     </div>
 
     <script>
+        // ============================================================
+        // CONTRASEÑA DE ACCESO ACTUAL
+        // Cambiá SOLO el texto entre comillas cuando quieras rotarla
+        // (recomendado: una vez por mes). No toques nada más de esta línea.
+        // ============================================================
+        const claveActual = "juguetona2026";
+
+        function checkAccess() {
+            const input = document.getElementById('gate-pass');
+            const errorBox = document.getElementById('gate-error');
+            const intento = input.value.trim();
+
+            if (intento && intento.toLowerCase() === claveActual.toLowerCase()) {
+                document.getElementById('gate-screen').classList.add('hidden');
+                document.getElementById('main-content').classList.remove('hidden');
+                errorBox.textContent = '';
+            } else {
+                errorBox.textContent = 'Contraseña incorrecta. Revisá el mail que te mandamos al confirmar la compra.';
+            }
+        }
+
+        document.getElementById('gate-pass').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') checkAccess();
+        });
+
         function changeVideo(youtubeId, element) {
             const videoIframe = document.getElementById('main-video');
             videoIframe.src = "https://www.youtube.com/embed/" + youtubeId + "?enablejsapi=1&autoplay=1&modestbranding=1&rel=0";
