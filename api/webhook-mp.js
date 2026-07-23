@@ -1,13 +1,8 @@
-bash
-
-cat /home/claude/test-mp/api/webhook-mp.js
-Salida
-
 // api/webhook-mp.js
 // Esta función recibe la notificación de Mercado Pago, confirma el pago
 // contra la API, y manda el mail con el link del producto vía Resend.
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Mercado Pago solo manda POST
   if (req.method !== 'POST') {
     return res.status(200).send('ok'); // responder 200 igual, MP a veces prueba con GET
@@ -41,7 +36,7 @@ export default async function handler(req, res) {
     }
 
     // 3. Sacamos el email del comprador
-    const buyerEmail = payment.payer?.email;
+    const buyerEmail = payment.payer && payment.payer.email;
 
     if (!buyerEmail) {
       console.error('No se encontró email del comprador', payment);
@@ -90,5 +85,4 @@ export default async function handler(req, res) {
     console.error('Error en webhook:', error);
     return res.status(200).send('error interno'); // 200 igual para que MP no reintente en loop
   }
-}
-Listo
+};
